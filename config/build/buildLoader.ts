@@ -10,23 +10,16 @@ export function buildLoader({isDev}: BuildOptions): webpack.RuleSetRule[] {
     }
 
     const cssLoader = {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sa|sc|c)ss$/i,
         use: [
-            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-            {
-                loader: "css-loader",
-                options: {
-                    modules: {
-                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-                        localIdentName: isDev
-                            ? '[path][name]__[local]--[hash:base65:5]'
-                            : '[hash:base64:8]'
-                    },
-                },
-            },
+            isDev
+                ? 'style-loader'
+                : MiniCssExtractPlugin.loader,
+            "css-loader",
             "sass-loader",
         ],
     }
+    console.log("CSS Loader Config:", JSON.stringify(cssLoader, null, 2));
     return [
         typescriptLoader,
         cssLoader,
