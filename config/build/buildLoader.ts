@@ -9,6 +9,20 @@ export function buildLoader({isDev}: BuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     }
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
+
     const cssLoader = {
         test: /\.(sa|sc|c)ss$/i,
         use: [
@@ -19,9 +33,10 @@ export function buildLoader({isDev}: BuildOptions): webpack.RuleSetRule[] {
             "sass-loader",
         ],
     }
-    console.log("CSS Loader Config:", JSON.stringify(cssLoader, null, 2));
     return [
         typescriptLoader,
         cssLoader,
+        svgLoader,
+        fileLoader,
     ]
 }
