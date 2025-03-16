@@ -1,7 +1,7 @@
-import {classNames} from "shared/lib/classNames/classNames";
-import * as s from './AppLink.module.scss'
 import React from "react";
+import * as s from './AppLink.module.scss'
 import {Link, LinkProps} from "react-router";
+import {classNames} from "shared/lib/classNames/classNames";
 
 export enum AppLinkTheme {
     PRIMARY = 'primary',

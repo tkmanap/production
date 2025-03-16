@@ -1,21 +1,69 @@
 @use 'variables/global' as vars;
-@use "normalize";
 @use "theme/darkTheme" as dark;
 @use "theme/lightTheme" as light;
+
+
+*html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal
+}
+
+ul {
+  list-style: none
+}
+
+button, input, select {
+  margin: 0
+}
+
+html {
+  box-sizing: border-box
+}
+
+*, *::before, *::after {
+  box-sizing: inherit
+}
+
+img, video {
+  height: auto;
+  max-width: 100%
+}
+
+iframe {
+  border: 0
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td, th {
+  padding: 0
+}
 
 .app {
   font: var(--font-m);
   background: var(--bg-color);
   color: var(--primary-color);
-
   min-height: 100vh;
 }
 
-.content_wrapper{
+.content-wrapper {
   display: flex;
 }
 
-.page_wrapper{
+.page-wrapper {
   flex-grow: 1;
   padding: 20px;
+}
+
+.img {
+  width: 35px;
+  height: 35px;
 }

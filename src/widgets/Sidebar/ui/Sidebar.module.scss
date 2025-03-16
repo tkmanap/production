@@ -1,13 +1,13 @@
 .Sidebar{
   height: calc(100vh - var(--header-height));
   position: relative;
-  width: var(--sidebar-width);
+  width: 300px;
   background: white;
   transition: width 0.3s;
 }
 
 .collapsed{
-  width: var(--sidebar-width-collapsed);
+  width: 70px;
   background: white;
 }
 
