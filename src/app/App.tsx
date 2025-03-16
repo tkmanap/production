@@ -7,8 +7,7 @@ import {AppRouter} from "app/providers/router";
 
 import {Header} from "widgets/Header";
 import {Sidebar} from "widgets/Sidebar";
-
-
+import PageLoader from "widgets/PageLoader/PageLoader";
 
 
 const App = () => {
@@ -16,7 +15,7 @@ const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback={<div>...Loading</div>}>
+            <Suspense fallback={<PageLoader/>}>
                 <Header/>
                 <div className={'content-wrapper'}>
                     <Sidebar/>
