@@ -2,8 +2,8 @@
   "compilerOptions": {
     "outDir": "./build/",
     "noImplicitAny": true,
-    "module": "esnext",
-    "target": "ES2015",
+    "module": "ESNext",
+    "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
@@ -25,5 +25,9 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "src",
+    "./config/jest/setupTests.ts"
+  ]
 }
