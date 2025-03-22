@@ -14,7 +14,7 @@
     "lint:scss:fix": "npx stylelint \"**/*.scss\"\n\n --fix",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "chromatic --project-token=chpt_be311802bed0665"
+    "chromatic": "npx chromatic --project-token=chpt_be311802bed0665"
   },
   "private": true,
   "devDependencies": {
