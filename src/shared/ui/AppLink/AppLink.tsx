@@ -21,7 +21,7 @@ const AppLink: React.FC<AppLinkProps> = (props) => {
         theme = AppLinkTheme.PRIMARY
     } = props
     return (
-        <Link to={to} className={classNames(s.AppLink, {}, [className, s[theme]])}>
+        <Link to={to} className={classNames(s.app_link, {}, [className, s[theme]])}>
             {children}
         </Link>
     );

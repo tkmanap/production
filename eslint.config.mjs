@@ -34,4 +34,10 @@ export default [
 
         }
     },
+    {
+        files: ["**/*.test.{ts,tsx}", "**/*.stories.{ts,tsx}"],
+        rules: {
+            'i18next/no-literal-string': 'off',
+        }
+    }
 ];
