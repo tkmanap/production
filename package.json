@@ -13,7 +13,8 @@
     "lint:scss": "npx stylelint \"**/*.scss\"\n\n",
     "lint:scss:fix": "npx stylelint \"**/*.scss\"\n\n --fix",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "chromatic": "chromatic --project-token=chpt_be311802bed0665"
   },
   "private": true,
   "devDependencies": {
@@ -43,6 +44,7 @@
     "@types/webpack-bundle-analyzer": "^4.7.0",
     "babel-loader": "^10.0.0",
     "babel-plugin-i18next-extract": "^1.0.0",
+    "chromatic": "^11.27.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.22.0",
     "eslint-plugin-i18next": "^6.1.1",
