@@ -21,11 +21,17 @@ export default [
     },
     {
         rules: {
-            'react/jsx-content': [2, {indentMode: 4, ignoreTernaryOperator: true}],
+            'react/jsx-indent': [2, 4, {checkAttributes: true, indentLogicalExpressions: true}],
             'react/jsx-indent-props': [2, 4],
             'indent': [2, 4],
             'react/react-in-jsx-scope': 'off',
-            'i18next/no-literal-string': ['error', {markupOnly: true}]
+            "react/display-name": ["off"],
+            'i18next/no-literal-string': ['error', {markupOnly: true}],
+            '@typescript-eslint/no-unused-vars': ['error', {
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+            }],
+
         }
-    }
+    },
 ];
