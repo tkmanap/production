@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.tsx",
+  "private": true,
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
@@ -11,27 +12,14 @@
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"\n\n",
-    "lint:scss:fix": "npx stylelint \"**/*.scss\"\n\n --fix",
-    "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_be311802bed0665"
+    "lint:scss:fix": "npx stylelint \"**/*.scss\"\n\n --fix"
   },
-  "private": true,
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
-    "@chromatic-com/storybook": "^3.2.6",
     "@eslint/js": "^9.22.0",
-    "@storybook/addon-essentials": "^8.6.7",
-    "@storybook/addon-interactions": "^8.6.7",
-    "@storybook/addon-onboarding": "^8.6.7",
-    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
-    "@storybook/blocks": "^8.6.7",
-    "@storybook/react": "^8.6.7",
-    "@storybook/react-webpack5": "^8.6.7",
-    "@storybook/test": "^8.6.7",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -45,7 +33,6 @@
     "@types/webpack-dev-server": "^4.7.1",
     "babel-loader": "^10.0.0",
     "babel-plugin-i18next-extract": "^1.0.0",
-    "chromatic": "^11.27.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.22.0",
     "eslint-plugin-i18next": "^6.1.1",
@@ -58,7 +45,6 @@
     "mini-css-extract-plugin": "^2.9.2",
     "sass": "^1.85.1",
     "sass-loader": "^16.0.5",
-    "storybook": "^8.6.7",
     "style-loader": "^4.0.0",
     "stylelint": "^16.16.0",
     "stylelint-config-standard-scss": "^14.0.0",
@@ -83,10 +69,5 @@
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",
     "react-router": "^7.2.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }

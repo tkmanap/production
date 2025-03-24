@@ -37,25 +37,3 @@ jobs:
 
       - name: Build Storybook
         run: npm run build-storybook
-
-  chromatic:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' # запускается только для main ветки
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Publish to Chromatic
-        run: npm run chromatic
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
