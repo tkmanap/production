@@ -19,7 +19,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
             __IS_DEV__: JSON.stringify(isDev),
         }),
     ];
-    if (isDev) {
+    if (isDev && process.env.CI !== 'true') {
         plugins.push(
             new BundleAnalyzerPlugin({
                 openAnalyzer: false
