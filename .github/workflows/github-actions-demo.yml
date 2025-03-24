@@ -21,7 +21,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+
+      - name: Build Project (Dev)
+        run: npm run build:dev
 
       - name: Lint TypeScript
         run: npm run lint:ts
@@ -32,5 +35,3 @@ jobs:
       - name: Run Unit Tests
         run: npm run unit
 
-      - name: Build Project (Dev)
-        run: npm run build:dev
