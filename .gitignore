@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 
+
 build
 node_modules
 dist
@@ -25,3 +26,7 @@ dist-ssr
 *.sln
 *.sw?
 *storybook.log
+
+
+**/*.module.css
+**/*.module.css.map
