@@ -23,7 +23,7 @@ const Sidebar = ({className}: SidebarProps) => {
         >
             <Button
                 data-testid={'sidebar-toggle'}
-                theme={ThemeButton.CLEAR} onClick={onToggle}
+                theme={ThemeButton.PRIMARY} onClick={onToggle}
             >
                 {t('toggle')}
             </Button>

@@ -11,7 +11,7 @@ const LangSwitcher = () => {
     }
     return (
         <Button
-            theme={ThemeButton.CLEAR}
+            theme={ThemeButton.PRIMARY}
             onClick={onToggle}
         >
             {t('lang')}

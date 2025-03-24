@@ -13,8 +13,8 @@
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"\n\n",
     "lint:scss:fix": "npx stylelint \"**/*.scss\"\n\n --fix",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006 -c ./config/storybook",
+    "build-storybook": "storybook build -c ./config/storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
