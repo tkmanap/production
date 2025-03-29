@@ -2,6 +2,6 @@
 export default {
     extends: ["stylelint-config-standard-scss"],
     "rules": {
-        "selector-class-pattern": "^[a-z0-9\\-_]+$"
+        "selector-class-pattern": "^[a-zA-Z0-9\\-_]+$"
     }
 };

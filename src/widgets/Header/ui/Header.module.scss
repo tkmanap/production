@@ -1,14 +1,18 @@
-.header{
+.header {
   background: #271c1c;
   color: white;
+
+  &__btn {
+    color: white;
+  }
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
 
-.link{
+.link {
   margin-right: 15px;
   margin-left: 15px;
 }

@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import i18next from 'eslint-plugin-i18next';
+import reactHooks from "eslint-plugin-react-hooks";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -11,6 +12,7 @@ export default [
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
     pluginReact.configs.flat.recommended,
+    reactHooks.configs['recommended-latest'],
     i18next.configs['flat/recommended'],
     {
         settings: {
@@ -38,6 +40,8 @@ export default [
         files: ["**/*.test.{ts,tsx}", "**/*.stories.{ts,tsx}"],
         rules: {
             'i18next/no-literal-string': 'off',
+            'react-hooks/rules-of-hooks': 'error',
+            'react-hooks/exhaustive-deps': 'warn',
         }
     }
 ];

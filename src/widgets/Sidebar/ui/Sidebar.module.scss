@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
   height: calc(100vh - var(--header-height));
   position: relative;
   width: 300px;
@@ -6,12 +6,26 @@
   transition: width 0.3s;
 }
 
-.collapsed{
+.collapsed {
   width: 70px;
   background: white;
 }
 
-.switcher{
+.switcher {
   position: absolute;
   bottom: 20px;
+}
+
+.collapsed_btn {
+  position: absolute;
+  right: 40px;
+  bottom: 50%;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-left: 15px;
 }

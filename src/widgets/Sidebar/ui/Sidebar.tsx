@@ -4,6 +4,7 @@ import * as s from './Sidebar.module.scss'
 import {ThemeSwitcher} from "widgets/ThemeSwitcher";
 import LangSwitcher from "widgets/LangSwitcher/LangSwitcher";
 import {Button, ThemeButton} from "shared/ui/Button/Button";
+import AppLink, {AppLinkTheme} from "shared/ui/AppLink/AppLink";
 import {useTranslation} from "react-i18next";
 
 interface SidebarProps {
@@ -21,11 +22,25 @@ const Sidebar = ({className}: SidebarProps) => {
             data-testid='sidebar'
             className={classNames(s.sidebar, {[s.collapsed]: collapsed}, [className])}
         >
+            <div className={s.link}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    className={s.link}
+                    to={'/'}>
+                    {t('Главная')}
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={'/about'}>
+                    {t('О нас')}
+                </AppLink>
+            </div>
             <Button
                 data-testid={'sidebar-toggle'}
                 theme={ThemeButton.PRIMARY} onClick={onToggle}
+                className={s.collapsed_btn}
             >
-                {t('toggle')}
+                {collapsed ? '>' : '<'}
             </Button>
             <div className={s.switcher}>
                 <ThemeSwitcher/>
