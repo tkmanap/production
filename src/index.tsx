@@ -9,14 +9,17 @@ import 'app/styles/index.scss'
 import {PageError} from "widgets/PageError";
 
 import "shared/config/i18n/i18n";
+import {StoreProvider} from "app/providers/StoreProvider";
 
 const root = createRoot(document.getElementById("root")!);
 root.render(
-    <BrowserRouter>
-        <ErrorBoundary fallback={<PageError/>}>
-            <ThemeProvider>
-                <App/>
-            </ThemeProvider>
-        </ErrorBoundary>
-    </BrowserRouter>
+    <StoreProvider>
+        <BrowserRouter>
+            <ErrorBoundary fallback={<PageError/>}>
+                <ThemeProvider>
+                    <App/>
+                </ThemeProvider>
+            </ErrorBoundary>
+        </BrowserRouter>
+    </StoreProvider>
 )
