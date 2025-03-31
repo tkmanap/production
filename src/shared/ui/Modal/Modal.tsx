@@ -19,7 +19,6 @@ export const Modal = (props: ModalProps) => {
         isOpen,
         onClose,
     } = props
-
     const [isClosing, setIsClosing] = useState(false)
 
     const closeHandler = useCallback(() => {

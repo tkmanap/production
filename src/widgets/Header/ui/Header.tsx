@@ -25,8 +25,11 @@ const Header = ({className}: HeaderProps) => {
             >
                 {t('Войти')}
             </Button>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {t('lorem')}
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fugiat nihil perspiciatis quas, qui
+                ratione voluptates. Alias eius error molestiae, odit quisquam reprehenderit suscipit! Enim esse impedit
+                magnam suscipit voluptate!
             </Modal>
         </div>
     );
